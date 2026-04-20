@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFA Simulator: Ends with '01'</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Theory of Computation: DFA Simulator</h1>
+        <p>This DFA accepts binary strings.</p>
+
+        <div class="controls">
+            <input type="text" id="binaryInput" placeholder="Enter binary string (e.g., 11001)" pattern="[01]*">
+            <button id="simulateBtn">Simulate</button>
+        </div>
+
+        <div class="status" id="statusMessage">Awaiting input...</div>
+
+        <div class="dfa-graph">
+            <div class="state" id="q0">
+                <span class="label">q0</span>
+                <span class="subtext">Start</span>
+            </div>
+            <div class="arrow">→</div>
+            <div class="state" id="q1">
+                <span class="label">q1</span>
+                <span class="subtext">Seen '0'</span>
+            </div>
+            <div class="arrow">→</div>
+            <div class="state accept-state" id="q2">
+                <span class="label">q2</span>
+                <span class="subtext">Accept</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="Script .js"></script>
+</body>
+
+</html>
