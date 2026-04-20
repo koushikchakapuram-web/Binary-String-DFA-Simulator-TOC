@@ -1,0 +1,119 @@
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.controls {
+    margin: 2rem 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #0066cc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0052a3;
+}
+
+.status {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    min-height: 1.5em;
+}
+
+.dfa-graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.state {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.accept-state {
+    border: 5px double #ccc; /* Double circle for accepting state */
+}
+
+.arrow {
+    font-size: 24px;
+    color: #aaa;
+}
+
+/* Dynamic Classes added by JavaScript */
+.state.active {
+    background-color: #ffeebf;
+    border-color: #ffaa00;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.4);
+}
+
+.state.success {
+    background-color: #d4edda;
+    border-color: #28a745;
+}
+
+.state.fail {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.subtext {
+    font-size: 0.7rem;
+    color: #666;
+}
